@@ -712,7 +712,7 @@ color: var(--accent-content-color);
 .overlay-content:focus .projects-overlay  {
   transform: translateY(0%);
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: c;
 
 }
 
@@ -750,10 +750,12 @@ color: var(--accent-content-color);
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: ;
+  /*opacity: 1;
+  visibility: visible;
+  pointer-events: auto;*/
+
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  pointer-events250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal{
@@ -761,27 +763,34 @@ color: var(--accent-content-color);
   top: 50%;
   left: 50%;
   width: 528px;
-  height: 580px;
+  height: 58px;
   transform: translate(-50%, -50%);
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   }
 
-  .close-btn {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 8px;
-    right: 8px;
+.close-btn {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
     
-    background:transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 6px 6px;
+  background:transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 6px 6px;
+}
 
-  }
+.close-img {
+  width: 18px;
+  height: 18px;
+  padding: 0 0;
+  
+}
 
   .is-hidden { 
     opacity: 0;
